@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Myrie</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <img src="/images/images/logo.png" alt="Logo" class="header-logo">
+        <span class="header-text">El restaurante Myrie...</span>
+    </div>
+</header>
+
+<div class="main-container">
+    <section class="left-section">
+        <h2>Categoría</h2>
+        <div class="category-buttons">
+            <button class="category-button" data-id="111">Entradas</button>
+            <button class="category-button" data-id="222">Carnes</button>
+            <button class="category-button" data-id="333">Sopas</button>
+            <button class="category-button" data-id="444">Arroces</button>
+            <button class="category-button" data-id="555">Bebidas</button>
+            <button class="category-button" data-id="666">Postres</button>
+        </div>
+    </section>
+    <section class="center-section">
+        <h2>Platillos</h2>
+        <div class="dish-list" id="dish-list">
+            <!-- Los platillos se mostrarán aquí -->
+        </div>
+    </section>
+    <section class="right-section" id="order-summary">
+        <h2>Orden</h2>
+        <div id="order-list">
+            <!-- Los platillos añadidos se mostrarán aquí -->
+        </div>
+        <button id="buy-button" style="display: none;">Comprar</button>
+    </section>
+
+</div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+        <label for="popup-quantity">Cantidad:</label>
+        <input type="number" id="popup-quantity" min="1" value="1">
+        <label for="popup-size">Tamaño:</label>
+        <select id="popup-size">
+            <option value="regular">Regular</option>
+            <option value="grande">Grande</option>
+        </select>
+        <button id="popup-add-button">Agregar</button>
+        <button id="popup-cancel-button">Cancelar</button>
+    </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

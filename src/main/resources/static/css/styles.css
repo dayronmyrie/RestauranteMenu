@@ -1,0 +1,256 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E0FFFF; /* Color de fondo del body */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #E0FFFF; /* Color de fondo del header */
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para el contenedor del header */
+.header-container {
+    background-color: #F5F5F5; /* Color de fondo del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 auto; /* Centrar el contenedor */
+    width: fit-content; /* Ajustar el ancho al contenido */
+}
+
+/* Estilos para la imagen del logo */
+.header-logo {
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px; /* Tamaño de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el texto del header */
+.header-text {
+    font-size: 24px; /* Tamaño del texto */
+    color: #FF6347; /* Color del texto */
+    font-family: 'Brush Script MT', cursive; /* Fuente del texto */
+}
+
+/* Estilos para el contenedor principal */
+.main-container {
+    display: flex;
+}
+
+/* Estilos para la sección izquierda */
+.left-section {
+    background-color: #F5F5F5; /* Color de fondo de la sección izquierda */
+    padding: 20px;
+    width: 20%; /* Ancho de la sección izquierda */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilos para el título de la sección */
+.left-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para los botones de categoría */
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-button {
+    background-color: #FF6347; /* Color de fondo de los botones */
+    color: #FFF; /* Color del texto de los botones */
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+.category-button:hover {
+    background-color: #FF4500; /* Color de fondo en hover */
+}
+
+/* Estilos para la sección central */
+.center-section {
+    flex-grow: 2;
+    padding: 20px;
+    background-color: #FFFFFF; /* Color de fondo de la sección central */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilos para el título de la sección central */
+.center-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos para la lista de platillos */
+.dish-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para cada platillo */
+.dish-item {
+    background-color: #F5F5F5; /* Color de fondo de los platillos */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilos para el título del platillo */
+.dish-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Estilos para la descripción del platillo */
+.dish-item p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Estilos para el precio del platillo */
+.dish-price {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos para el botón de agregar */
+.add-to-cart {
+    background-color: #FF6347; /* Color de fondo del botón */
+    color: #FFF; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para el hover */
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #FF4500; /* Color de fondo en hover */
+}
+
+/* Estilos para la sección derecha */
+.right-section {
+    flex-grow: 1;
+    padding: 20px;
+}
+/* Popup container */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#popup-quantity,
+#popup-size {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#popup-add-button,
+#popup-cancel-button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#popup-add-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#popup-cancel-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.order-item {
+    background-color: #F5F5F5; /* Color de fondo del item de orden */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+}
+
+.order-item h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.order-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+#buy-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para el hover */
+    width: 100%;
+}
+
+#buy-button:hover {
+    background-color: #45a049; /* Color de fondo en hover */
+}
+
